@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Change EA Sim GUI Elements positions
-// @description     Get back the disable unit button to old position.
+// @description     Get back the disable unit button to old position. Removes the EA statistics bar.
 // @author          VisiG
 // @version         0.1
 // @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
