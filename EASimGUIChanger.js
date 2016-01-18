@@ -5,7 +5,6 @@
 // @version         0.1
 // @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @include         https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
-// @icon            
 // @updateURL       http://github.com/VisiG/EASimGuiChanger/raw/master/EASimGUIChanger.js
 // @downloadURL     http://github.com/VisiG/EASimGuiChanger/raw/master/EASimGUIChanger.js
 // ==/UserScript==
