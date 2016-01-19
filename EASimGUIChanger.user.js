@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name            Change EA Sim GUI Elements positions
-// @description     Get back the disable unit button to old position. Removes the EA statistics bar.
+// @description     Get back the disable unit button to old position.
 // @author          VisiG
-// @version         0.2
+// @version         0.3
 // @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @include         https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @updateURL       https://raw.githubusercontent.com/VisiG/EASimGuiChanger/master/EASimGUIChanger.user.js
@@ -31,7 +31,7 @@
                         }
                         else
                         {
-                            rightGUIBar.removeAt(3);
+                            //rightGUIBar.removeAt(3); // removes the ea stats bar
                             rightAttackBar.removeAt(1);
                             //ArmySetupAttackBar.getChildren()[2].getChildren()[1].getChildren()[8].getChildren()[1]; // play button
                             rightAttackBar.addAt(unitDisableButton, 1);
