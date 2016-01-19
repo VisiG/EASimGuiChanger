@@ -12,7 +12,8 @@
 (function () {
     var EASimGUIChanger_main = function () {
         function EASimGUIChanger_checkIfLoaded() {
-			try {
+        	if (PerforceChangelist >= 443425) { // patch 16.1 
+        		try {
 				if (typeof qx !== 'undefined' && typeof qx.core !== 'undefined' && typeof qx.core.Init !== 'undefined') {
 					try {
                         app = qx.core.Init.getApplication();
@@ -47,10 +48,11 @@
 				console.log("EASimGUIChanger_checkIfLoaded: ", e);
 			}
 		}
+        }
 
-		if (/commandandconquer\.com/i.test(document.domain)) {
-			window.setTimeout(EASimGUIChanger_checkIfLoaded, 1000);
-		}
+	if (/commandandconquer\.com/i.test(document.domain)) {
+		window.setTimeout(EASimGUIChanger_checkIfLoaded, 1000);
+	}
     }
     
   try {
