@@ -2,7 +2,7 @@
 // @name            Change EA Sim GUI Elements positions
 // @description     Get back the disable unit button to old position.
 // @author          VisiG
-// @version         0.3
+// @version         0.4
 // @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @include         https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @updateURL       https://raw.githubusercontent.com/VisiG/EASimGuiChanger/master/EASimGUIChanger.user.js
@@ -22,7 +22,13 @@
                         ArmySetupAttackBar = app.getArmySetupAttackBar();
                         rightAttackBar = ArmySetupAttackBar.getChildren()[2].getChildren()[1].getChildren()[8];
                         EASimAttackBar = ArmySetupAttackBar.getChildren()[0].getChildren()[1];
-                        unitDisableButton = EASimAttackBar.getChildren()[8]; // enable disable button
+                        if(PerforceChangelist >= 448942) { // patch 16.2
+                            unitDisableButton = EASimAttackBar.getChildren()[11];
+                        }
+                        else
+                        {
+                            unitDisableButton = EASimAttackBar.getChildren()[8]; // enable disable button
+                        }
                         playButton = ArmySetupAttackBar.getChildren()[2].getChildren()[1].getChildren()[8].getChildren()[1];
                         
                         if(rightGUIBar === null || rightAttackBar === null || unitDisableButton === null || playButton === null)
@@ -35,8 +41,13 @@
                             rightAttackBar.removeAt(1);
                             //ArmySetupAttackBar.getChildren()[2].getChildren()[1].getChildren()[8].getChildren()[1]; // play button
                             rightAttackBar.addAt(unitDisableButton, 1);
-                            
-                            EASimAttackBar.addAt(playButton, 8);
+                            if(PerforceChangelist >= 448942) { // patch 16.2
+                                EASimAttackBar.addAt(playButton, 7);
+                            }
+                            else
+                            {
+                                EASimAttackBar.addAt(playButton, 8);
+                            }
                         }
                     } catch (e) {
                         window.setTimeout(EASimGUIChanger_checkIfLoaded, 1000);
